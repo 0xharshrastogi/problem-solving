@@ -8,15 +8,20 @@ export default class PerformanceTest {
 
   test(count = 10) {
     const result: number[] = [];
+    let sum = 0;
 
     for (let i = 0; i < count; i++) {
       let prev = performance.now();
+
       this.callback();
-      result.push(performance.now() - prev);
+
+      let time = performance.now() - prev;
+
+      sum += time;
+      result.push(time);
     }
-    const average = result.reduce((sum = 0, current) => sum + current) / result.length;
 
     console.table(result);
-    console.log("Average Time Taken: %ds", average);
+    console.log("Average Time Taken: %ds", sum / count);
   }
 }
