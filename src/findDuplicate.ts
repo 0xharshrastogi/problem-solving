@@ -1,5 +1,5 @@
-import { NumberInput } from "./generateInput";
-import PerformanceTest from "./performanceTest";
+import { NumberInput } from './generateInput';
+import PerformanceTest from './performanceTest';
 
 function printDuplicate(data: number[] | NumberInput): number[] {
   let array: number[];
@@ -9,9 +9,9 @@ function printDuplicate(data: number[] | NumberInput): number[] {
   } else array = data;
 
   const dups: number[] = [];
-  for (let i in array) {
+  for (const i in array) {
     console.log(array);
-    let value = Math.abs(array[i]);
+    const value = Math.abs(array[i]);
 
     if (array[value] >= 0) array[value] *= -1;
     else dups.push(value);

@@ -1,27 +1,27 @@
 export default class PerformanceTest {
-  private callback: Function;
+  private callback: () => void;
 
-  constructor(callback: Function, count = 10) {
+  constructor(callback: () => void, count = 10) {
     this.callback = callback;
     this.test(count);
   }
 
-  test(count = 10) {
+  test(count = 10): void {
     const result: number[] = [];
     let sum = 0;
 
     for (let i = 0; i < count; i++) {
-      let prev = performance.now();
+      const prev = performance.now();
 
       this.callback();
 
-      let time = performance.now() - prev;
+      const time = performance.now() - prev;
 
       sum += time;
       result.push(time);
     }
 
     console.table(result);
-    console.log("Average Time Taken: %ds", sum / count);
+    console.log('Average Time Taken: %ds', sum / count);
   }
 }

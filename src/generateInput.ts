@@ -1,7 +1,7 @@
 class RandomInputs {
   public input: unknown;
-  private min = 10;
-  private max = 10;
+  protected min = 10;
+  protected max = 10;
 
   constructor(min: number, max: number) {
     this.min = min;
@@ -32,7 +32,7 @@ export class NumberInput extends RandomInputs {
 
 export class RandomString {
   private length = 10;
-  input: string = "";
+  input = "";
 
   constructor(length?: number) {
     if (length && length > 0) this.length = length;
@@ -44,3 +44,24 @@ export class RandomString {
     this.input = String.fromCharCode(...random);
   }
 }
+
+export class RandomMatrix extends RandomInputs {
+  private rows: number;
+  private cols: number;
+  input: number[][] = [];
+
+  constructor(rows: number, cols: number, min: number, max: number) {
+    super(min, max);
+    this.rows = rows;
+    let a 
+    this.cols = cols;
+    this.randomize();
+  }
+
+  randomize():void {
+    for (let i = 0;i < this.rows; i++) {
+      this.input.push(new NumberInput(this.cols, this.min, this.max).input);
+    }
+  }
+}
+

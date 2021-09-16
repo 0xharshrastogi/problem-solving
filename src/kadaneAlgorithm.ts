@@ -1,6 +1,3 @@
-import { NumberInput } from "./generateInput";
-import PerformanceTest from "./performanceTest";
-
 function kadaneAlgorithm(array: number[]) {
   let [oSum, cSum] = [-Infinity, -Infinity];
 
@@ -12,4 +9,4 @@ function kadaneAlgorithm(array: number[]) {
   return oSum;
 }
 
-new PerformanceTest(() => kadaneAlgorithm(new NumberInput(100000, -1000, 1000).input), 100);
+const result = kadaneAlgorithm([-1, -1, 2, 3, -9, 10, 12, -5]);

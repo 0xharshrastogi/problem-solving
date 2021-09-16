@@ -1,0 +1,206 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Auto Rename Tag
+  "auto-rename-tag.activationOnLanguage": ["html", "xml", "php", "javascript"],
+  // Editor
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 400,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontSize": 14,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 22,
+  "editor.minimap.enabled": true,
+  "editor.minimap.maxColumn": 100,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  // "editor.snippetSuggestions": "top",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSurroundingLines": 0,
+  "editor.cursorWidth": 1,
+  "editor.fontFamily": "'JetBrains Mono','Fira Code' ,Consolas, 'Courier New', monospace",
+  "editor.fontWeight": "400",
+  "editor.comments.insertSpace": true,
+  "editor.smoothScrolling": true,
+  "editor.linkedEditing": true,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+
+  // terminal
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.fontFamily": "\"Fira Code\"",
+  "terminal.integrated.fontWeight": "bold",
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.letterSpacing": 2,
+
+  //Emmet
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "jsx-sublime-babel-tags": "javascriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showSuggestionsAsSnippets": true,
+
+  //eslint
+  "eslint.alwaysShowStatus": true,
+  "eslint.lintTask.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.run": "onSave",
+
+  //prettier
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 100,
+  "prettier.arrowParens": "always",
+  "prettier.bracketSpacing": true,
+  "prettier.endOfLine": "lf",
+  "prettier.semi": true,
+  "prettier.jsxBracketSameLine": false,
+  "prettier.trailingComma": "es5",
+  "prettier.requirePragma": true,
+  "prettier.insertPragma": true,
+
+  //Sync Setting
+  "sync.gist": "1730e52102f78d79607ea46c871a4c8f",
+
+  // tailwind
+  "tailwindCSS.emmetCompletions": true,
+
+  // path intellesense
+  "typescript.suggest.paths": false,
+  "path-intellisense.extensionOnImport": false,
+
+  // Visual Studio Intellicode
+  "vsintellicode.python.completionsEnabled": false,
+  "vsintellicode.modelDownloadPath": null,
+  "vsintellicode.java.completionsEnabled": false,
+  "vsintellicode.features.python.deepLearning": "disabled",
+  "vsintellicode.sql.completionsEnabled": false,
+  "vsintellicode.typescript.completionsEnabled": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+  // files
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true
+  },
+
+  // "typescript.disableAutomaticTypeAcquisition": true,
+  "files.eol": "\n",
+  "editor.quickSuggestionsDelay": 2,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "typescript.tsserver.enableTracing": false,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
+  "html-css-class-completion.enableEmmetSupport": true,
+  "html-css-class-completion.includeGlobPattern": "**/*.{jsx,js,css,html}",
+  "html-css-class-completion.excludeGlobPattern": "/node_modules ",
+  "explorer.confirmDragAndDrop": false,
+  "workbench.iconTheme": "material-icon-theme",
+
+  "editor.tokenColorCustomizations": {
+    "[Palenight Theme]": {
+      "textMateRules": [
+        {
+          "name": "True",
+          "scope": "constant.language.boolean.true",
+          "settings": {
+            "foreground": "#6cc973",
+            "fontStyle": "italic bold"
+          }
+        },
+        {
+          "name": "True",
+          "scope": "constant.language.boolean.false",
+          "settings": {
+            "foreground": "#e47f2c",
+            "fontStyle": "italic bold"
+          }
+        },
+        {
+          "name": "JSX Style",
+          "scope": ["entity.name.tag support.class.component", "entity.name.tag"],
+          "settings": {
+            "fontStyle": "bold"
+          }
+        }
+      ]
+    }
+  },
+  "bracket-pair-colorizer-2.colors": ["Gold", "Orchid", "LightSkyBlue"],
+  "git.confirmSync": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.inlineSuggest.enabled": true,
+  "workbench.colorTheme": "Atom One Dark",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+
+  // GOLANG
+  "go.useLanguageServer": true,
+  "go.languageServerExperimentalFeatures": {
+    "diagnostics": true
+  },
+
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.snippetSuggestions": "none",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+
+  "[go.mod]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+
+  "gopls": {
+    "ui.completion.usePlaceholders": true
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "terminal.integrated.defaultProfile.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe (migrated)",
+  "terminal.integrated.profiles.windows": {
+    "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe (migrated)": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "args": []
+    }
+  },
+  "terminal.external.windowsExec": "C:\\Program Files\\Git\\git-bash.exe",
+  "terminal.integrated.automationShell.windows": "C:\\Program Files\\Git\\git-bash.exe"
+}
