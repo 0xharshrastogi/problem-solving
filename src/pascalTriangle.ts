@@ -10,12 +10,7 @@ function pascalTriangle(count = 10) {
     }
     rows.push(row);
   }
-  console.table(rows);
+  return rows;
 }
 
 pascalTriangle(12);
-
-// 1
-// 1 1
-// 1 2 1
-// 1 3 3 1
