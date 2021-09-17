@@ -7,5 +7,3 @@ function uniquePathsGrid(rows: number, cols: number): number {
   for (let i = totalSteps - R; i >= 1; i--) result /= i;
   return result;
 }
-
-console.log(uniquePathsGrid(1, 3000));
