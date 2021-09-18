@@ -1,4 +1,5 @@
 import { NumberInput } from './generateInput';
+import PerformanceTest from './performanceTest';
 
 function longestZeroSumSubArray(nums: number[]): number {
   const storeSum = new Map<number, number>();
@@ -16,4 +17,4 @@ function longestZeroSumSubArray(nums: number[]): number {
   return len;
 }
 
-console.log(longestZeroSumSubArray(new NumberInput(10, -5, 5).input));
+new PerformanceTest(() => longestZeroSumSubArray(new NumberInput(100, -100, 100).input));
