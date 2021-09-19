@@ -2,7 +2,6 @@ import { RandomString } from './generateInput';
 import PerformanceTest from './performanceTest';
 
 function repeatingCharacters(str: string) {
-  console.log(str);
   const charSet = new Set<string>();
   let [left, len] = [0, 0];
 
