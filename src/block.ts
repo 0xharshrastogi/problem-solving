@@ -12,3 +12,5 @@ export class ListBlock<T> extends Block<T> {
     super(value);
   }
 }
+
+export type ListNode<T> = ListBlock<T> | null;

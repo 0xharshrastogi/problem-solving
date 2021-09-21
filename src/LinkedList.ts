@@ -4,9 +4,9 @@ type ListNode<T> = ListBlock<T> | null;
 export class List<T> {
   private head: ListNode<T> = null;
 
-  constructor(vals: T[]);
   constructor(...vals: T[]) {
-    if (vals.length > 0) this.insertInitials(vals);
+    if (vals.length === 1 && Array.isArray(vals)) this.insertInitials(vals);
+    else if (vals.length > 0) this.insertInitials(vals);
   }
 
   getHead(): ListNode<T> {

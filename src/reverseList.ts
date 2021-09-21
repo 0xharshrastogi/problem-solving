@@ -18,3 +18,4 @@ function reverseList<T>(current: ListNode<T>): ListNode<T> {
 const list = new List(new NumberInput(10, 20, 30).input);
 list.setHead(reverseList(list.getHead()));
 console.log(...list);
+console.log({ sum: 41878 + 72320 + 72918 + 33546 + 13315 + 16002 });
