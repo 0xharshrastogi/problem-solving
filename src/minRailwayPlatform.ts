@@ -1,10 +1,3 @@
-class Time {
-  constructor(public arrival: number, public departure: number) {
-    this.arrival = arrival;
-    this.departure = departure;
-  }
-}
-
 function minRailwayPlatform(arr: number[], dept: number[]) {
   arr.sort((a, b) => a - b);
   dept.sort((a, b) => a - b);
