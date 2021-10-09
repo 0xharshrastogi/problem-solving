@@ -1,5 +1,3 @@
-import { NumberInput } from './generateInput';
-
 function powerSet(nums: number[]) {
   const s = 2 ** nums.length;
   const subset: number[][] = [];
@@ -13,4 +11,4 @@ function powerSet(nums: number[]) {
   return subset;
 }
 
-powerSet(new NumberInput(3, 0, 10).input);
+console.log(powerSet([1, 2, 2]));
