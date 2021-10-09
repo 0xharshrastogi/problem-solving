@@ -1,3 +1,5 @@
+import PerformanceTest from './performanceTest';
+
 type Cell = 'Q' | '.';
 
 class Board {
@@ -19,7 +21,7 @@ class Board {
   }
 }
 
-function isSafe(matrix: Cell[][], row: number, col: number) {
+function isSafe(matrix: Cell[][], row: number, col: number, pos: any) {
   // check left
   for (let i = col - 1; i >= 0; i--) if (matrix[row][i] === 'Q') return false;
 
@@ -34,8 +36,13 @@ function isSafe(matrix: Cell[][], row: number, col: number) {
   return true;
 }
 
-function nQueen(queenCount: number) {
+function solveNQueens(queenCount: number) {
   const board = new Board(queenCount);
+  const pos = {
+    row: new Array(queenCount).fill(false),
+    lowerDiagonal: new Array(queenCount * 2 - 1).fill(false),
+    upperDiagonal: new Array(queenCount * 2 - 1).fill(false),
+  };
   const result: Cell[][][] = [];
 
   const calculate = (board: Board, coloum = 0) => {
@@ -45,10 +52,22 @@ function nQueen(queenCount: number) {
     }
 
     for (let row = 0; row < queenCount; row++) {
-      if (isSafe(board.matrix, row, coloum)) {
+      if (
+        !pos.row[row] &&
+        !pos.lowerDiagonal[row + coloum] &&
+        !pos.upperDiagonal[queenCount - 1 + coloum - row]
+      ) {
         board.update('Q', row, coloum);
+        pos.row[row] = true;
+        pos.lowerDiagonal[row + coloum] = true;
+        pos.upperDiagonal[queenCount - 1 + coloum - row] = true;
+
         calculate(board, coloum + 1);
+
         board.update('.', row, coloum);
+        pos.row[row] = false;
+        pos.lowerDiagonal[row + coloum] = false;
+        pos.upperDiagonal[queenCount - 1 + coloum - row] = false;
       }
     }
 
@@ -57,3 +76,5 @@ function nQueen(queenCount: number) {
 
   return calculate(board, 0);
 }
+
+new PerformanceTest(() => nQueen(11));
